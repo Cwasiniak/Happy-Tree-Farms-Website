@@ -1,194 +1,37 @@
 <!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Digital Countdown</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<html lang="en">
+    <body>
+        <div class="hero">
+            <div class="container">
+                <div class="clock">
+                    <span id="hrs">00</span>
+                    <span>:</span>
+                    <span id="mins">00</span>
+                    <span>:</span>
+                    <span id="sec">00</span>
+                </div>
+            </div>
+        </div>
 
-<head> 
-    <title>Sweet Tree Farm</title> 
-    <link href="style.css" type="text/css" rel="stylesheet"> 
-    <meta charset="UTF-8"> 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-</head>
+        <script>
+            let hrs = document.getElementById("hrs");
+            let mins = document.getElementById("mins");
+            let sec = document.getElementById("sec");
+        
+        setinterval(()=>{
+            let currentTime = new Date();
 
-<body>
+            hrs.innerHTML = (currentTime.getHours()<10?"0":"") + currentTime.getHours();
+            mins.innerHTML = (currentTime.getMinutes()<10?"0":"") + currentTime.getMinutes();
+            sec.innerHTML = (currentTime.getSeconds()<10?"0":"") + currentTime.getSeconds();
+        },1000)
 
-<div id="wrapper"> 
-
-<header>
-
-<div id="row1-col1"><a href="index.html"><img src="images/logo1.png"></a></div>
-    
-<div id="row1-col2">
-    <div id="row1-col2-top">
-        <nav>
-    <ul>
-        <li><a href="#blank">Blog</a></li>
-        <li><a href="#blank">Shop</a></li>
-        <li><a href="#blank">Contact</a></li>
-        <li><a href="#blank">Careers</a></li>
-        </ul>
-    <form>
-    <input type="text" placeholder="Search..." readonly>
-    <button type="button">Enter</button>
-            </form>
-    </nav>
-</div>
-    <div id="row1-col2-bottom">
-    <nav>
-    <ul>
-        <li><a href="#blank">Fruit Nutrition</a></li>
-        <li><a href="#blank">Sustainability</a></li>
-        <li><a href="#blank">Recipes</a></li>
-        <li><a href="#blank">About Us</a></li>
-        <li><a href="#blank">Locations</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-</header>
-
-<div id="row2-col1">
-    <div id="action">
-        <h1>Growing Sweetness <br>From the Ground Up!</h1>
-        <p>Welcome to Sweet Tree Farm, where we pride ourselves on cultivating some of the freshest and most delicious fruits in the region. We have a presence in three distinct locations throughout the U.S.</p> <p>Thank you for considering our fruit farm, and we look forward to serving you soon.</p>
-        <div class="action-button"><a href="#blank">Explore</a></div>
-    </div>
-</div>
-
-<main>
-
-<div id="row3-col1">
-    <img src="images/row3-col1.jpg">
-    <h3>Want to incorporate more fruits into your diet? Try these ten tips!</h3>
-    <h4><a href="#blank">READ MORE</a></h4>
-</div>
-    
-
-<div id="row4-col1">
-    <h3>Join Us on the Fruit Journey.</h3>
-    <p>Our farm is located in the heart of the countryside, surrounded by acres of lush greenery and scenic landscapes. Whether you are a fruit lover or just looking for a healthy snack, we invite you to visit our fruit farm and experience the taste of our freshly picked fruits. </p>
-</div>
-    
-<div id="row5-col1-2"> 
-    <div id="row5-col1">
-    <img src="images/fruitnutrition.jpg">
-    <h3>Fruit Nutrition</h3>
-    <p>At our fruit farm, we grow a wide variety of fruits, including apples, pears, peaches, plums, cherries, and many more. Our fruits are carefully nurtured and harvested by hand to ensure that they are of the highest quality. </p>
-    <h4><a href="#blank">READ MORE</a></h4>
-    </div>
-    <div id="row5-col2">
-    <img src="images/sustainability.jpg">
-    <h3>Sustainability</h3>
-    <p>At our fruit farm, we recognize that the health of the environment is critical to the long-term success of our business. We are committed to sustainable farming practices that help to minimize our environmental impact while promoting the health of our soil, trees, and fruits.</p>
-    <h4><a href="#blank">READ MORE</a></h4>
-    </div> 
-</div>
-<div id="row5-col3">
-    <img src="images/recipe.jpg">
-    <h3>Recipes</h3>
-    <p>Whether you are looking for a new way to use up your farm-fresh produce or are simply in search of some healthy and delicious meal ideas, we invite you to browse our collection of recipes and try them out for yourself.</p>
-    <h4><a href="#blank">READ MORE</a></h4>
-    </div>
-    
-<div id="aboutus">
-    <h2>About Us</h2>
-</div>
-    
-
-<div id="row6-col1">
-    <img src="images/company.jpg">
-    <h3>Company</h3>
-    <p>We have been in the fruit farming business since 1978, and our experience and expertise have allowed us to produce top-quality fruits that are enjoyed by our customers all year round.</p> 
-    <p>Our commitment to quality is evident in everything we do, from the way we care for our trees to the way we package and transport our fruits. We take great pride in providing our customers with the freshest and most flavorful fruits possible, and we believe that our dedication to quality sets us apart from other fruit farms</p>
-    <h4><a href="#blank">READ MORE</a></h4>
-    </div>
-    
-<div id="row6-col2">
-    <div id="row6-col2-top">
-    <img src="images/owner.jpg">
-    <h3>Owner</h3>
-    <p>Meet the owner of Sweet Tree Farm, Rafael Rivera. Rafael is a warm and dedicated farmer who is committed to producing the best quality produce while preserving the environment.</p>
-    <h4><a href="#blank">READ MORE</a></h4></div>
-    <div id="row6-col2-bottom">
-    <!-- <img src="images/CEO.jpg"> -->
-    <h3>Farm Manager</h3>
-    <p>The farm manager of Sweet Tree Farm is Gabriella Santiago. She has a deep love for nature and a keen eye for detail, which is reflected in the high-quality produce that she cultivates on the farm.</p>
-    <h4><a href="#blank">READ MORE</a></h4></div>
-</div>
-    
-<div id="row7-col1">
-    <div id="action2">
-    <h1>In the Community</h1>
-    <p></p>
-    <div class="action-button2"><a href="#blank">Explore</a></div>
-    </div>
-</div>
-    
-<div id="locations">
-    <h2>Locations</h2></div>
-    
-<div id="row8-col1-2"> 
-    <div id="row8-col1">
-    <img src="images/USfarming2.jpg">
-    <h3>Central Valley, <br>California</h3>
-    <p>This region is known for its Mediterranean climate, which is ideal for growing a variety of fruits, including grapes, oranges, lemons, and almonds.</p>
-    <h4><a href="#blank">READ MORE</a></h4>
-    </div>
-    <div id="row8-col2">
-    <img src="images/USfarming1.jpg">
-    <h3>Yuma, Arizona</h3>
-    <p>Located in the southwestern corner of Arizona, Yuma is a hot, desert region that is ideal for growing citrus fruits, melons, and other warm-weather crops.</p>
-    <h4><a href="#blank">READ MORE</a></h4>
-    </div> 
-</div>
-<div id="row8-col3">
-    <img src="images/USfarming3.jpg">
-    <h3>Willamette Valley, <br>Oregon</h3>
-    <p>This region's mild, rainy climate makes it an ideal location for growing a variety of fruits, including strawberries, blueberries, raspberries, and cherries.</p>
-    <h4><a href="#blank">READ MORE</a></h4>
-    </div>
-    
-</main>
-
-<footer>
-
-<div id="rtt">
-    <p><a href="index.html">RETURN TO TOP</a></p>
-</div>
-    
-<div id="bottom-navi">
-    <ul>
-        <li><a href="#blank">Blog</a></li>
-        <li><a href="#blank">Shop</a></li>
-        <li><a href="#blank">Contact</a></li>
-        <li><a href="#blank">Careers</a></li></ul>
-</div>
-<div id="row9-col1-2">
-    <div id="row9-col1">
-    <h5>Contact Us</h5>
-    
-    <ul>
-        <li><a href="#blank">(123) 456-7890</a></li>
-        <li><a href="#blank">SweetTreeFarm@email.com</a></li>
-        <li><a href="#blank">1234 Sweet Lane, Central Valley, California</a></li>
-        <li><a href="#blank">2314 Tree Street, Yuma, Arizona</a></li>
-        <li><a href="#blank">4132 Farm Drive, Willamette Valley, Oregon</a></li></ul>
-    </div>
-    
-    <div id="row9-col2">
-    <h5>Links</h5>
-    <ul>
-        <li><a href="#blank">Fruit Nutrition</a></li>
-        <li><a href="#blank">Sustainability</a></li>
-        <li><a href="#blank">Recipes</a></li>
-        <li><a href="#blank">About Us</a></li>
-        <li><a href="#blank">Locations</a></li></ul>
-    </div>
-</div>
-    
-</footer>
-
-</div>
-
-</body>
+        </script>
+    </body>
+</html>
